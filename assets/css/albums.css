@@ -1,0 +1,58 @@
+/* Multi-album additions. Original Multiverse styles remain in main.css. */
+:root{--paper:#eee9df;--muted:#a8a8a1;--accent:#c9b994;}
+body,input,textarea{font-family:"Source Sans Pro","PingFang SC","Microsoft YaHei",sans-serif;}
+body{color:var(--paper);background:#1f2224;}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:5px;}
+.intro{padding:5.5rem 6vw 2.8rem;max-width:1680px;margin:auto;}
+.eyebrow{font-size:11px;letter-spacing:.24em;color:var(--accent);margin:0 0 1.5rem;}
+.intro h2{font-size:clamp(2.2rem,4.6vw,4.7rem);line-height:1.28;letter-spacing:.06em;color:var(--paper);font-weight:300;margin:0 0 2rem;}
+.intro-bottom{display:flex;justify-content:space-between;align-items:center;gap:1rem;}
+.intro-bottom p{margin:0;color:var(--muted);font-size:14px;line-height:1.8;}
+.intro-bottom>span{white-space:nowrap;color:var(--accent);font-size:11px;letter-spacing:.1em;}
+#main.album-index{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;padding:0 6vw;max-width:1680px;margin:auto;}
+.album-card{min-width:0;}
+.album-card>a{border:0;display:block;position:relative;height:440px;overflow:hidden;background:#333;}
+.album-card img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .65s ease,filter .65s ease;filter:saturate(.78);}
+.album-card>a:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.04) 15%,rgba(0,0,0,.12) 40%,rgba(0,0,0,.8) 100%);pointer-events:none;}
+.album-card>a:hover img{transform:scale(1.035);filter:saturate(1);}
+.album-copy{position:absolute;bottom:0;left:0;right:0;padding:2.1rem;z-index:1;color:#fff;}
+.album-kicker{font-size:10px;letter-spacing:.2em;margin:0 0 1rem;color:#ded8c9;}
+.album-copy h2{font-size:30px;letter-spacing:.12em;margin:0 0 .65rem;}
+.album-copy>p:not(.album-kicker){font-size:13px;margin-bottom:1.5rem;line-height:1.8;}
+.album-meta{border-top:1px solid #ffffff45;display:flex;justify-content:space-between;align-items:center;padding-top:1rem;font-size:11px;color:#e0ddd5;}
+.album-meta>span{font-size:24px;line-height:1;}
+.page-note{display:flex;justify-content:space-between;gap:1rem;padding:2rem 6vw 3rem;color:var(--muted);font-size:11px;letter-spacing:.03em;max-width:1680px;margin:auto;}
+.page-note a{color:var(--accent);white-space:nowrap;}
+.brand-note{font-size:10px;letter-spacing:.12em;margin-left:.6rem;color:var(--muted);}
+#header h1{letter-spacing:.07em;}
+#header nav>ul>li>a{letter-spacing:.05em;}
+.album-intro{padding-top:2.7rem;}
+.album-intro h2{font-size:clamp(2rem,3.7vw,3.4rem);margin-bottom:1rem;}
+.back-link{display:inline-block;font-size:12px;color:var(--muted);margin-bottom:2.8rem;}
+.album-intro .eyebrow{margin-bottom:1rem;}
+#main.photo-gallery .thumb>h2{font-size:13px;letter-spacing:.08em;}
+.album-links{list-style:none;padding:0;}
+.album-links li{padding:0;}
+.album-links a{display:flex;justify-content:space-between;padding:.8rem 0;font-size:15px;}
+.album-links span{font-size:12px;color:var(--muted);}
+.sample-note{font-size:12px;color:var(--muted);}
+#footer p{line-height:1.9;}
+.poptrox-popup .caption{background:linear-gradient(transparent,rgba(15,17,19,.94) 25%);max-height:42%;overflow-y:auto;overscroll-behavior:contain;padding:2rem 2rem 1.2rem;}
+.poptrox-popup .caption p{font-size:14px;line-height:1.85;white-space:normal;overflow-wrap:anywhere;margin:0;}
+.poptrox-popup .caption h2{font-size:17px;letter-spacing:.05em;}
+.poptrox-popup .closer{opacity:1;background-color:#1117;border-radius:50%;width:44px;height:44px;right:8px;top:8px;background-size:28px;text-indent:-9999px;overflow:hidden;z-index:4;}
+.poptrox-popup .nav-next,.poptrox-popup .nav-previous{opacity:.85;z-index:3;}
+@media(max-width:736px){
+ .intro{padding:2.5rem 6vw 1.8rem;}.intro h2{font-size:2.3rem;}
+ .intro-bottom{align-items:flex-start;flex-direction:column;gap:.6rem;}
+ #main.album-index{grid-template-columns:1fr;gap:1rem;}
+ .album-card>a{height:360px;}.album-copy{padding:1.6rem;}.album-copy h2{font-size:27px;}
+ .page-note{flex-direction:column;padding-top:1.4rem;}.page-note>span:last-child{font-size:9px;}
+ .brand-note{display:none;}#header h1{font-size:12px;left:1rem;}
+ #header nav>ul>li>a{padding:0 1rem;font-size:12px;}#header .home-link{display:none;}
+ .back-link{margin-bottom:1.8rem;}.album-intro h2{font-size:2.2rem;}
+ .poptrox-popup .caption{padding:1.4rem 1rem .8rem;max-height:40%;}
+ .poptrox-popup .caption p{font-size:12px;line-height:1.65;}
+ .poptrox-popup .nav-next,.poptrox-popup .nav-previous{width:40px;height:60px;margin-top:-30px;background-size:32px;}
+}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important;}}
